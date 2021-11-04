@@ -32,7 +32,6 @@ public class Effects {
 
 	public void setStatus(Boolean status) {
 		this.status = status;
-		// gary is cool :sunglasses:
 	}
 	
 	
