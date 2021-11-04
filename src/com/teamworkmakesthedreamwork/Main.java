@@ -16,6 +16,7 @@ public class Main {
 	static final int GRHEIGHT = 800;
 	
 	private GraphicsConsole gc = new GraphicsConsole (GRWIDTH, GRHEIGHT);
+	private Effects[] init = new Effects[10]; 
 	
 	private Main() {
 		initialize();
@@ -41,6 +42,7 @@ public class Main {
 		gc.enableMouseMotion();
 		gc.clear();
 		
+		init[0] = new Ball(190, GRHEIGHT); 
 		System.out.println("Finished Initialization!");
 	}
 	
@@ -52,6 +54,17 @@ public class Main {
 			gc.setColor(Color.WHITE);
 			gc.setStroke(4);
 			gc.drawLine(GRWIDTH/2-200, GRHEIGHT/2-200, GRWIDTH/2+200, GRHEIGHT/2+200);
+			
+			Ball b = new Ball(0, GRHEIGHT-30); 
+			gc.setColor(b.getColour());
+			
+			int x = b.getX();
+			int y = b.getY(); 
+			System.out.println(x);
+			System.out.println(y);
+			gc.fillOval(x, y, b.getDiameter(), b.getDiameter()); 
+			
+			System.out.println(init[0].getColour());
 		}
 	}
 }
