@@ -19,6 +19,8 @@ public class Main {
 	
 	private Main() {
 		initialize();
+		
+		//hello
 
 		//main loop, q to quit
 		while (gc.getKeyCode() != 'Q') {
